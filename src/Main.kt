@@ -80,10 +80,10 @@ fun createCalcMenu(menuMap: Map<Int, Equation>) {
 fun handleCalcEquation(equation: Equation) {
 //    Given an Equation, get the user inputs, calculate the result, display the result and save result to history
 
-    val inputs = getEquationsInputs(equation)
-    val result = equation.calculate(inputs)
-    val resultString = equation.formatResult(inputs, result)
-    history.add(resultString) // add formatted result to history list
+    val inputs = getEquationsInputs(equation) // get inputs from user
+    val result = equation.calculate(inputs) // calulate the result
+    val resultString = equation.formatResult(inputs, result) // create result output string
+    history.add(resultString) // add result string to history list
     println("\n$resultString\n")  // display the result
 
     println("Press Enter to continue...")
