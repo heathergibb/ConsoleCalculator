@@ -1,5 +1,5 @@
-val history = mutableListOf<String>()//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+val history = mutableListOf<String>()
+
 fun main() {
 //    Start program with Main Menu display and keep returning to Main Menu until the user chooses to Exit
 
@@ -78,6 +78,8 @@ fun createCalcMenu(menuMap: Map<Int, Equation>) {
 }
 
 fun handleCalcEquation(equation: Equation) {
+//    Given an Equation, get the user inputs, calculate the result, display the result and save result to history
+
     val inputs = getEquationsInputs(equation)
     val result = equation.calculate(inputs)
     val resultString = equation.formatResult(inputs, result)
@@ -89,6 +91,8 @@ fun handleCalcEquation(equation: Equation) {
 }
 
 fun viewHistory() {
+//    Displays the history of all calculations performed during this session.
+
     history.forEach{ println(it) }
 
     println("\nPress any key to continue...")

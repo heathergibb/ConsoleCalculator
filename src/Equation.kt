@@ -1,13 +1,14 @@
 enum class Equation(
-//    This class holds all the information for each equation including:
-//    Display name for showing in the menu,
-//    Prompts for the necessary inputs (with validation logic and error messages, if applicable),
-//    Category type (enum used to group equations into their respective menus),
-//    Calculation function to calculate the result from validated inputs,
-//    Formatting function to create a string to display the equation and result (used in View History)
+//    Enum class holding all the available equations for the calculator.
+//    Each equation contains:
+//    - Display name for showing in the menu
+//    - List of input prompts with optional validation logic and error messages
+//    - Category type used to group equations in the menu (e.g. BASIC, GEOMETRY, CONVERSION)
+//    - Calculation function to compute the result based on inputs
+//    - Formatting function to create a string to display the equation and result (used in View History)
 //
-//    NOTE: Equations are displayed in the order they are listed here (filtered by type)
-//    Add new equations in the position you want them to appear in the menu
+//    NOTE: Equations are displayed in the order they are listed in this enum (filtered by category)
+//    To add new equation, insert it where you'd like it to appear in the menu.
 
     val displayName: String,
     val prompts: List<InputPrompts>, // Prompts contains input prompts(s) and logic to handle validation
