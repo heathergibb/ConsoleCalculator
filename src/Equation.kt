@@ -63,7 +63,7 @@ enum class Equation(
             "Square Root",
             listOf(
                 InputPrompts("Enter number:",
-                { it > 0.0 }, // input must be positive
+                { it >= 0.0 }, // input must not be negative
                 "Number cannot be negative. Try again.")
             ),
             EquationCategory.BASIC,
@@ -76,7 +76,7 @@ enum class Equation(
             listOf(
                 InputPrompts("Enter radius:",
                 { it > 0.0 }, // input must be positive
-                "Radius cannot be negative. Try again.")
+                "Radius must be greater than zero. Try again.")
             ),
             EquationCategory.GEOMETRY,
             { inputs -> kotlin.math.PI * inputs[0] * inputs[0] },
@@ -87,7 +87,7 @@ enum class Equation(
             listOf(
                 InputPrompts("Enter radius:",
                     { it > 0.0 }, // input must be positive
-                    "Radius cannot be negative. Try again.")
+                    "Radius must be greater than zero. Try again.")
             ),
             EquationCategory.GEOMETRY,
             { inputs -> 2 * kotlin.math.PI * inputs[0] },
@@ -98,10 +98,10 @@ enum class Equation(
             listOf(
                 InputPrompts("Enter length:",
                     { it > 0.0 }, // input must be positive
-                    "Length cannot be negative. Try again."),
+                    "Length must be greater than zero. Try again."),
                 InputPrompts("Enter width:",
                     { it > 0.0 }, // input must be positive
-                    "Width cannot be negative. Try again.")
+                    "Width must be greater than zero. Try again.")
                 ),
             EquationCategory.GEOMETRY,
             { inputs -> inputs[0] * inputs[1] },
@@ -118,7 +118,7 @@ enum class Equation(
                     "Base 2 must be greater than zero. Try again."),
                 InputPrompts("Enter height:",
                     { it > 0.0 }, // input must be positive
-                    "Height must be greater than 0. Try again.")
+                    "Height must be greater than zero. Try again.")
             ),
             EquationCategory.GEOMETRY,
             { inputs -> 0.5 * (inputs[0] + inputs[1]) * inputs[2] },
@@ -129,10 +129,10 @@ enum class Equation(
             listOf(
                 InputPrompts("Enter base:",
                 { it > 0.0 }, // base must be positive
-                "Base cannot be negative. Try again."),
+                "Base must be greater than zero. Try again."),
                 InputPrompts("Enter height:",
                     { it > 0.0 }, // height must be positive
-                    "Height cannot be negative. Try again.")
+                    "Height must be greater than zero. Try again.")
                 ),
             EquationCategory.GEOMETRY,
             { inputs -> 0.5 * inputs[0] * inputs[1] },

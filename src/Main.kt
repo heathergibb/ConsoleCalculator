@@ -86,7 +86,7 @@ fun handleCalcEquation(equation: Equation) {
     history.add(resultString) // add formatted result to history list
     println("\n$resultString\n")  // display the result
 
-    println("Press any key to continue...")
+    println("Press Enter to continue...")
     readln()
 }
 
@@ -95,6 +95,6 @@ fun viewHistory() {
 
     history.forEach{ println(it) }
 
-    println("\nPress any key to continue...")
+    println("\nPress Enter to continue...")
     readln()
 }
