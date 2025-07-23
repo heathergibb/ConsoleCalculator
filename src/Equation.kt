@@ -24,8 +24,8 @@ enum class Equation(
                 InputPrompts("Enter number to add:")
             ),
             EquationCategory.BASIC,
-            { inputs -> inputs[0] + inputs[1] },
-            { inputs, result -> "${inputs[0]} + ${inputs[1]} = $result" }
+            { inputs -> inputs[0] + inputs[1] }, //given a list of inputs, calculate the result
+            { inputs, result -> "${inputs[0]} + ${inputs[1]} = $result" } //given list of inputs and result, return a formated display string
         ),
         SUBTRACT(
             "Subtract",

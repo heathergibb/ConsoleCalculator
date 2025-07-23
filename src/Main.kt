@@ -45,7 +45,7 @@ fun runCalc(eqCat : EquationCategory) {
 
     // load the equation information into a collection filtered by the equation category
     val equations = Equation.entries.filter { it.category == eqCat }
-    val menuMap = equations.mapIndexed { index, equation -> index + 1 to equation }.toMap()
+    val menuMap = equations.mapIndexed { index, equation -> index + 1 to equation }.toMap() // add menu numbering for each equation, to be used in the calc menu
 
     var selection = 0
 
