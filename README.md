@@ -8,7 +8,7 @@ New equations can be added to the Equation enum class that will be dynamically a
 My purpose for writing this program was to learn the basics of Kotlin and to practice using IntelliJ IDEA. 
 I wanted something easy enough to make quickly but complex enough that I gained experience with different types of classes, loops and user interactions.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=Zym8ZNHW3DI)
 
 # Development Environment
 
