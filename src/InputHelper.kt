@@ -1,3 +1,7 @@
+/*
+    Handles all interactions with user, validates and responses
+*/
+
 fun getMenuSelection(listCount : Int) : Int {
 //    listCount parameter refers to the max number in a numeric menu, starting at 1.
 //    Prompt user to select a menu option, then validate user's input

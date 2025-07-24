@@ -1,13 +1,14 @@
-val history = mutableListOf<String>()
+val history = mutableListOf<String>() // global list containing history of all calculations in a session
 
 fun main() {
 //    Start program with Main Menu display and keep returning to Main Menu until the user chooses to Exit
 
-    history.add("=== HISTORY ===\n") // add a title to the history list
+    history.add("\nHISTORY") // add a title to the history list
+    history.add("*******")
 
     var selection = 0 // default selection to an invalid number
 
-    // redisplay the menu until the user chooses to exit - 5)
+    // redisplay the menu until the user chooses to exit)
     while (selection != 5) {
 
         displayMainMenu()
@@ -19,8 +20,8 @@ fun main() {
 fun displayMainMenu() {
 //    Main Menu Display
 
-    println("=== Calculator ===")
-    println()
+    println("\nCALCULATOR")
+    println("**********")
     println("1. Basic Calculator")
     println("2. Geometry Calculator")
     println("3. Conversion")
@@ -53,8 +54,9 @@ fun runCalc(eqCat : EquationCategory) {
 
     // redisplay the calc menu until user selects the option to return to main menu
     while (selection != exitNum) {
-        println("=== $eqCat CALCULATOR ===")
-        println()
+        val title = "$eqCat CALCULATOR"
+        println("\n$title")
+        println("*".repeat(title.length))
         createCalcMenu(menuMap) // add the equation options to the menu list
         println("$exitNum. Return to Main Menu") // add an exit option to the menu list
         println()

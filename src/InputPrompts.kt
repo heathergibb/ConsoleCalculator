@@ -1,5 +1,5 @@
 data class InputPrompts(
-//    This data class represents a single input prompt used in an equation.
+//    This data class represents a single input prompt and optional validation used for each equation.
 //    It includes:
 //    - A prompt message to ask the user for a number,
 //    - An optional validation function, to check if the number is valid
