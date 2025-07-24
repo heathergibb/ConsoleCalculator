@@ -8,7 +8,7 @@ fun main() {
 
     var selection = 0 // default selection to an invalid number
 
-    // redisplay the menu until the user chooses to exit)
+    // redisplay the menu until the user chooses to exit
     while (selection != 5) {
 
         displayMainMenu()
@@ -83,7 +83,7 @@ fun handleCalcEquation(equation: Equation) {
 //    Given an Equation, get the user inputs, calculate the result, display the result and save result to history
 
     val inputs = getEquationsInputs(equation) // get inputs from user
-    val result = equation.calculate(inputs) // calulate the result
+    val result = equation.calculate(inputs) // calculate the result
     val resultString = equation.formatResult(inputs, result) // create result output string
     history.add(resultString) // add result string to history list
     println("\n$resultString\n")  // display the result
